@@ -2,10 +2,8 @@ import React from 'react';
 import {
   HashRouter as Router, Switch, Route, Redirect
 } from 'react-router-dom';
-import TodosPage from '../pages/TodosPage/index';
-import NotFound from '../pages/NotFoundPage/index';
-
-// const store = createStore();
+import TodosPage from '../pages/TodosPage';
+import NotFound from '../pages/NotFoundPage';
 
 function App() {
   return (
