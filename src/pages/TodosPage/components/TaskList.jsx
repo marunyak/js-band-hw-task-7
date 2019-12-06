@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import Task from './Task';
 
-function TaskList({ todo }) {
+function TaskList({ todo, filter }) {
   const high = [];
   const normal = [];
   const low = [];
@@ -16,15 +16,15 @@ function TaskList({ todo }) {
   });
 
   const newItems = high.concat(normal, low, done);
-  // const list = newItems.filter((item) => (filter.search === ''
-  //                           || item.title.toLowerCase()
-  //                             .search(new RegExp(`^${filter.search.toLowerCase()}`, 'g')) !== -1))
-  //   .filter((item, index, arr) => (filter.open === 'all'
-  //                           || (filter.open === 'open' && arr[index].done === false)
-  //                           || (filter.open === 'done' && arr[index].done === true)))
-  //   .filter((item, index, arr) => (filter.priority === 'all'
-  //                           || arr[index].priority === filter.priority));
-  const newItem = newItems.map((item) => (
+  const list = newItems.filter((item) => (filter.search === ''
+                            || item.title.toLowerCase()
+                              .search(new RegExp(`^${filter.search.toLowerCase()}`, 'g')) !== -1))
+    .filter((item, index, arr) => (filter.open === 'all'
+                            || (filter.open === 'open' && arr[index].done === false)
+                            || (filter.open === 'done' && arr[index].done === true)))
+    .filter((item, index, arr) => (filter.priority === 'all'
+                            || arr[index].priority === filter.priority));
+  const newItem = list.map((item) => (
     <Task todo={item} key={item.id} />
   ));
 
@@ -36,9 +36,8 @@ function TaskList({ todo }) {
 }
 
 const mapStateToProps = (state) => ({
-  todo: state.todo
-
-  // todo: state.todo.map(id => state.todo[id])
+  todo: state.todo,
+  filter: state.filter
 });
 
 export default connect(mapStateToProps)(TaskList);
