@@ -2,7 +2,7 @@
 /* eslint-disable react/jsx-no-comment-textnodes */
 import React from 'react';
 import { connect } from 'react-redux';
-import { doneTodo, deleteTodo } from '../../../actions';
+import { doneTodo, deleteTodo, editTodo } from '../../../actions';
 
 class Task extends React.Component {
   constructor(props) {
@@ -53,7 +53,7 @@ class Task extends React.Component {
                 className="dropdown-item edit"
                 data-toggle="modal"
                 data-target="#exampleModalCenter"
-                onClick={this.handleEdit}
+                // onClick={this.handleEdit}
               >
 edit
               </div>
