@@ -2,7 +2,7 @@
 /* eslint-disable react/jsx-no-comment-textnodes */
 import React from 'react';
 import { connect } from 'react-redux';
-import { doneTodo } from '../../../actions';
+import { doneTodo, deleteTodo } from '../../../actions';
 
 class Task extends React.Component {
   constructor(props) {
@@ -14,6 +14,12 @@ class Task extends React.Component {
     // eslint-disable-next-line no-shadow
     const { doneTodo, todo } = this.props;
     doneTodo(todo.id);
+  }
+
+  handleDelete = () => {
+    // eslint-disable-next-line no-shadow
+    const { deleteTodo, todo } = this.props;
+    deleteTodo(todo.id);
   }
 
   render() {
@@ -45,7 +51,7 @@ Low
               >
 edit
               </div>
-              <div className="dropdown-item delete">delete</div>
+              <div className="dropdown-item delete" onClick={this.handleDelete}>delete</div>
             </div>
           </div>
         </div>
@@ -53,4 +59,4 @@ edit
     );
   }
 }
-export default connect(null, { doneTodo })(Task);
+export default connect(null, { doneTodo, deleteTodo })(Task);
