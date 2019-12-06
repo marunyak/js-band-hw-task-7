@@ -28,6 +28,8 @@ It is todo-list application. Which includes next functionality:
 │   └── index.html
 ├── src/
 │   ├── actions/
+│   │   ├── index.jsx
+│   │   └── todo.jsx
 │   ├── components/
 │   │   ├── App.jsx
 │   │   ├── App.test.jsx
@@ -45,6 +47,10 @@ It is todo-list application. Which includes next functionality:
 │   │       │   └── TaskList.jsx
 │   │       └── index.jsx
 │   ├── reducers/
+│   │   ├── index.jsx
+│   │   └── todo.jsx
+│   ├── store/
+│   │   └── index.jsx
 │   └── index.jsx
 ├── .eslintrc
 ├── .gitignore
@@ -97,6 +103,8 @@ $ npm run fix
 ## Scripts description
 * `./public/index.html` - main html file;
 * `./public/favicon.ico` - icon for html page;
+* `./src/actions/index.jsx` - main actions file;
+* `./src/actions/todo.jsx` - consist all actions logic;
 * `./src/componetns/App.jsx` - file for routing;
 * `./src/componetns/App.test.jsx` - test file App.jsx;
 * `./src/componetns/Header.jsx` - header component;
@@ -108,6 +116,9 @@ $ npm run fix
 * `./src/pages/TodosPage/components/Task.jsx` - task component;
 * `./src/pages/TodosPage/components/TaskList.jsx` - tasklist component;
 * `./src/pages/TodosPage/index.jsx` - root component TodosPage;
+* `./src/reducers/index.jsx` - combine all reducers files;
+* `./src/reducers/todo.jsx` - consist all reducers logic;
+* `./src/store/index.jsx` - file createStore;
 * `./src/index.jsx` - file which render all page;
 * `./src/componetns/TodosPage.jsx` - our main component;
 * `.eslintrc` - file for lint configuration;
