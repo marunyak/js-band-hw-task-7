@@ -37,6 +37,8 @@ function TaskList({ todo }) {
 
 const mapStateToProps = (state) => ({
   todo: state.todo
+
+  // todo: state.todo.map(id => state.todo[id])
 });
 
 export default connect(mapStateToProps)(TaskList);

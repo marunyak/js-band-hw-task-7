@@ -7,3 +7,8 @@ export const addTodo = (todo) => ({
   type: ADD_TODO,
   payload: todo
 });
+
+export const doneTodo = (todo) => ({
+  type: DONE_TODO,
+  payload: todo
+});
