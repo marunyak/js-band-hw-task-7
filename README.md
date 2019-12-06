@@ -28,6 +28,7 @@ It is todo-list application. Which includes next functionality:
 │   └── index.html
 ├── src/
 │   ├── actions/
+│   │   ├── filter.jsx
 │   │   ├── index.jsx
 │   │   └── todo.jsx
 │   ├── components/
@@ -47,6 +48,7 @@ It is todo-list application. Which includes next functionality:
 │   │       │   └── TaskList.jsx
 │   │       └── index.jsx
 │   ├── reducers/
+│   │   ├── filter.jsx
 │   │   ├── index.jsx
 │   │   └── todo.jsx
 │   ├── store/
@@ -103,8 +105,9 @@ $ npm run fix
 ## Scripts description
 * `./public/index.html` - main html file;
 * `./public/favicon.ico` - icon for html page;
+* `./src/actions/filter.jsx` - consist all filter actions logic;
 * `./src/actions/index.jsx` - main actions file;
-* `./src/actions/todo.jsx` - consist all actions logic;
+* `./src/actions/todo.jsx` - consist all todo actions logic;
 * `./src/componetns/App.jsx` - file for routing;
 * `./src/componetns/App.test.jsx` - test file App.jsx;
 * `./src/componetns/Header.jsx` - header component;
@@ -116,8 +119,9 @@ $ npm run fix
 * `./src/pages/TodosPage/components/Task.jsx` - task component;
 * `./src/pages/TodosPage/components/TaskList.jsx` - tasklist component;
 * `./src/pages/TodosPage/index.jsx` - root component TodosPage;
+* `./src/reducers/filter.jsx` - consist all filter reducers logic;
 * `./src/reducers/index.jsx` - combine all reducers files;
-* `./src/reducers/todo.jsx` - consist all reducers logic;
+* `./src/reducers/todo.jsx` - consist all todo reducers logic;
 * `./src/store/index.jsx` - file createStore;
 * `./src/index.jsx` - file which render all page;
 * `./src/componetns/TodosPage.jsx` - our main component;
