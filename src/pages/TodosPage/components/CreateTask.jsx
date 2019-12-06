@@ -106,9 +106,4 @@ Save changes
     );
   }
 }
-
-// const mapStateToProps = (state) => ({
-//   todo: state.todo
-// });
-
 export default connect(null, { addTodo })(CreateTask);

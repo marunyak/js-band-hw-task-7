@@ -37,7 +37,7 @@ class Task extends React.Component {
               type="button"
               className={`btn status-priority text-white ${colors[todo.priority]}`}
             >
-Low
+              {todo.priority}
             </button>
             <button type="button" className="btn btn-warning dropdown-toggle text-white" data-toggle="dropdown">
               ...
