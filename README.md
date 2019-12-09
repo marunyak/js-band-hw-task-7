@@ -28,6 +28,7 @@ It is todo-list application. Which includes next functionality:
 │   └── index.html
 ├── src/
 │   ├── actions/
+│   │   ├── filter.jsx
 │   │   ├── index.jsx
 │   │   ├── filter.jsx
 │   │   ├── modal.jsx
@@ -49,6 +50,7 @@ It is todo-list application. Which includes next functionality:
 │   │       │   └── TaskList.jsx
 │   │       └── index.jsx
 │   ├── reducers/
+│   │   ├── filter.jsx
 │   │   ├── index.jsx
 │   │   ├── filter.jsx
 │   │   ├── modal.jsx
@@ -108,7 +110,7 @@ $ npm run fix
 ## Scripts description
 * `./public/index.html` - main html file;
 * `./public/favicon.ico` - icon for html page;
-* `./src/actions/index.jsx` - main actions file;
+* `./src/actions/filter.jsx` - consist all filter actions logic;
 * `./src/actions/todo.jsx` - consist all actions logic;
 * `./src/actions/filter.jsx` - consist filter actions;
 * `./src/actions/modal.jsx` - consist modal actions;
@@ -123,6 +125,7 @@ $ npm run fix
 * `./src/pages/TodosPage/components/Task.jsx` - task component;
 * `./src/pages/TodosPage/components/TaskList.jsx` - tasklist component;
 * `./src/pages/TodosPage/index.jsx` - root component TodosPage;
+* `./src/reducers/filter.jsx` - consist all filter reducers logic;
 * `./src/reducers/index.jsx` - combine all reducers files;
 * `./src/reducers/todo.jsx` - consist reducer for todo;
 * `./src/reducers/modal.jsx` - consist reducer for modal;
