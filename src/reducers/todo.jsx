@@ -1,5 +1,5 @@
 import {
-  ADD_TODO, DONE_TODO, DELETE_TODO
+  ADD_TODO, DONE_TODO, DELETE_TODO, UPDATE_TODO
 } from '../actions';
 
 const todo = (state = [], action) => {
@@ -19,6 +19,17 @@ const todo = (state = [], action) => {
     }
     case DELETE_TODO: {
       return state.filter((item) => item.id !== payload);
+    }
+    case UPDATE_TODO: {
+      const list = state.map((item) => {
+        if (item.id === payload.id) {
+          item = {
+            ...item, title: payload.title, description: payload.description, priority: payload.priority
+          };
+        }
+        return item;
+      });
+      return list;
     }
     default:
       return state;
