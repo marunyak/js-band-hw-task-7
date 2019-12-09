@@ -1,6 +1,9 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { changeSearch, changeStatus, changePriority } from '../../../actions';
+import {
+  changeSearch, changeStatus, changePriority, toggleOpen, deletee
+} from '../../../actions';
+
 
 class Filter extends React.Component {
   constructor(props) {
@@ -35,6 +38,13 @@ class Filter extends React.Component {
 
     this.setState({ priority: this.selectPriority.value });
     changePriority(this.selectPriority.value);
+  }
+
+  onHandleClick = () => {
+    // eslint-disable-next-line no-shadow
+    const { toggleOpen, deletee } = this.props;
+    deletee();
+    toggleOpen(true);
   }
 
   render() {
@@ -82,7 +92,12 @@ class Filter extends React.Component {
             <option value="low">low</option>
           </select>
         </div>
-        <button type="button" className="btn btn-success" data-toggle="modal" data-target="#exampleModalCenter">
+        <button
+          type="button"
+          className="btn btn-success"
+          data-toggle="modal" // data-target="#exampleModalCenter"
+          onClick={this.onHandleClick}
+        >
     Create
         </button>
       </nav>
@@ -90,4 +105,6 @@ class Filter extends React.Component {
   }
 }
 
-export default connect(null, { changeSearch, changeStatus, changePriority })(Filter);
+export default connect(null, {
+  changeSearch, changeStatus, changePriority, toggleOpen, deletee
+})(Filter);

@@ -1,4 +1,5 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import Header from '../../components/Header';
 import Main from '../../components/Main';
 import Footer from '../../components/Footer';
@@ -6,7 +7,7 @@ import CreateTask from './components/CreateTask';
 import TaskList from './components/TaskList';
 import Filter from './components/Filter';
 
-function TodosPage() {
+function TodosPage({ isOpen }) {
   return (
     <div>
       <Header />
@@ -15,8 +16,12 @@ function TodosPage() {
         <TaskList />
       </Main>
       <Footer />
-      <CreateTask />
+      {isOpen ? <CreateTask /> : ''}
+      {/* <CreateTask /> */}
     </div>
   );
 }
-export default TodosPage;
+const mapStateToProps = (state) => ({
+  isOpen: state.popup.isOpen,
+});
+export default connect(mapStateToProps)(TodosPage);

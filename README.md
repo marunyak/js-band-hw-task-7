@@ -30,10 +30,12 @@ It is todo-list application. Which includes next functionality:
 │   ├── actions/
 │   │   ├── filter.jsx
 │   │   ├── index.jsx
+│   │   ├── filter.jsx
+│   │   ├── modal.jsx
+│   │   ├── popup.jsx
 │   │   └── todo.jsx
 │   ├── components/
 │   │   ├── App.jsx
-│   │   ├── App.test.jsx
 │   │   ├── Footer.jsx
 │   │   ├── Header.jsx
 │   │   └── Main.jsx
@@ -50,6 +52,9 @@ It is todo-list application. Which includes next functionality:
 │   ├── reducers/
 │   │   ├── filter.jsx
 │   │   ├── index.jsx
+│   │   ├── filter.jsx
+│   │   ├── modal.jsx
+│   │   ├── popup.jsx
 │   │   └── todo.jsx
 │   ├── store/
 │   │   └── index.jsx
@@ -106,10 +111,11 @@ $ npm run fix
 * `./public/index.html` - main html file;
 * `./public/favicon.ico` - icon for html page;
 * `./src/actions/filter.jsx` - consist all filter actions logic;
-* `./src/actions/index.jsx` - main actions file;
-* `./src/actions/todo.jsx` - consist all todo actions logic;
+* `./src/actions/todo.jsx` - consist all actions logic;
+* `./src/actions/filter.jsx` - consist filter actions;
+* `./src/actions/modal.jsx` - consist modal actions;
+* `./src/actions/popup.jsx` - consist popup actions;
 * `./src/componetns/App.jsx` - file for routing;
-* `./src/componetns/App.test.jsx` - test file App.jsx;
 * `./src/componetns/Header.jsx` - header component;
 * `./src/componetns/Main.jsx` - main component;
 * `./src/componetns/Footer.jsx` - footer component;
@@ -121,7 +127,10 @@ $ npm run fix
 * `./src/pages/TodosPage/index.jsx` - root component TodosPage;
 * `./src/reducers/filter.jsx` - consist all filter reducers logic;
 * `./src/reducers/index.jsx` - combine all reducers files;
-* `./src/reducers/todo.jsx` - consist all todo reducers logic;
+* `./src/reducers/todo.jsx` - consist reducer for todo;
+* `./src/reducers/modal.jsx` - consist reducer for modal;
+* `./src/reducers/popup.jsx` - consist reducer for popup;
+* `./src/reducers/filter.jsx` - consist reducer for filter;
 * `./src/store/index.jsx` - file createStore;
 * `./src/index.jsx` - file which render all page;
 * `./src/componetns/TodosPage.jsx` - our main component;
