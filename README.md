@@ -1,6 +1,6 @@
-# js-band-hw-task-7
+# js-band-hw-task-6
 
-Demo: http://marunyak.github.io/js-band-hw-task-7/#/todos
+Demo: http://marunyak.github.io/js-band-hw-task-6/#/todos
 
 ## Description
 It is todo-list application. Which includes next functionality:
@@ -27,32 +27,18 @@ It is todo-list application. Which includes next functionality:
 │   ├── favicon.ico
 │   └── index.html
 ├── src/
-│   ├── actions/
-│   │   ├── filter.jsx
-│   │   ├── index.jsx
-│   │   └── todo.jsx
 │   ├── components/
 │   │   ├── App.jsx
 │   │   ├── App.test.jsx
+│   │   ├── CreateTask.jsx
+│   │   ├── Filter.jsx
 │   │   ├── Footer.jsx
 │   │   ├── Header.jsx
-│   │   └── Main.jsx
-│   ├── pages/
-│   │   ├── NotFoundPage/
-│   │   │   └── index.jsx
-│   │   └── TodosPage/
-│   │       ├── components/
-│   │       │   ├── CreateTask.jsx
-│   │       │   ├── Filter.jsx
-│   │       │   ├── Task.jsx
-│   │       │   └── TaskList.jsx
-│   │       └── index.jsx
-│   ├── reducers/
-│   │   ├── filter.jsx
-│   │   ├── index.jsx
-│   │   └── todo.jsx
-│   ├── store/
-│   │   └── index.jsx
+│   │   ├── Main.jsx
+│   │   ├── NotFound.jsx
+│   │   ├── Task.jsx
+│   │   ├── TaskList.jsx
+│   │   └── TodosPage.jsx
 │   └── index.jsx
 ├── .eslintrc
 ├── .gitignore
@@ -94,7 +80,6 @@ $ npm run fix
 
 ## Technologies
  - [React](https://reactjs.org/) - JavaScript library for building user interfaces
- - [Redux](https://redux.js.org/) - a predictable state container for JavaScript apps
  - [Babel](https://babeljs.io/) - toolchain that is mainly used to convert ECMAScript 2015+ code into a backwards compatible version of JavaScript in current and older browsers
  - [Webpack](https://webpack.js.org/) - tool for bundle scritps
  - [Travis](https://docs.travis-ci.com/user/customizing-the-build/) - tool for CI
@@ -105,29 +90,21 @@ $ npm run fix
 ## Scripts description
 * `./public/index.html` - main html file;
 * `./public/favicon.ico` - icon for html page;
-* `./src/actions/filter.jsx` - consist all filter actions logic;
-* `./src/actions/index.jsx` - main actions file;
-* `./src/actions/todo.jsx` - consist all todo actions logic;
+* `./src/index.jsx` - file which render all page;
 * `./src/componetns/App.jsx` - file for routing;
 * `./src/componetns/App.test.jsx` - test file App.jsx;
+* `./src/componetns/CreateTask.jsx` - modal component;
+* `./src/componetns/Filter.jsx` - filter component for modal;
+* `./src/componetns/Footer.jsx` - footer component;
 * `./src/componetns/Header.jsx` - header component;
 * `./src/componetns/Main.jsx` - main component;
-* `./src/componetns/Footer.jsx` - footer component;
-* `./src/pages/NotFoundPage/index.jsx` - render page not found;
-* `./src/pages/TodosPage/components/CreateTask.jsx` - modal component for creating task;
-* `./src/pages/TodosPage/components/Filter.jsx` - filter component;
-* `./src/pages/TodosPage/components/Task.jsx` - task component;
-* `./src/pages/TodosPage/components/TaskList.jsx` - tasklist component;
-* `./src/pages/TodosPage/index.jsx` - root component TodosPage;
-* `./src/reducers/filter.jsx` - consist all filter reducers logic;
-* `./src/reducers/index.jsx` - combine all reducers files;
-* `./src/reducers/todo.jsx` - consist all todo reducers logic;
-* `./src/store/index.jsx` - file createStore;
-* `./src/index.jsx` - file which render all page;
+* `./src/componetns/NotFound.jsx` - render page not found;
+* `./src/componetns/Task.jsx` - task component;
+* `./src/componetns/TaskList.jsx` - tasklist component;
 * `./src/componetns/TodosPage.jsx` - our main component;
 * `.eslintrc` - file for lint configuration;
 * `.travis.yml` - file for CI configuration;
-* `.gitignore` - ignore files when we push project in repo;
+* `.travis.yml` - ignore files when we push project in repo;
 * `package-lock.json` - automatically generated for any operations where npm modifies either the node_modules tree, or package.json;
 * `package.json` - file is used to give information to npm that allows it to identify the project as well as handle the project's dependencies.
 
